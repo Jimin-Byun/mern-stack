@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Link, withRouther } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
@@ -79,7 +79,6 @@ const AddExperience = ({ addExperience, history }) => {
               type='checkbox'
               name='current'
               checked={current}
-              value=''
               value={current}
               onChange={(e) => {
                 setFormData({ ...formData, current: !current });
@@ -122,4 +121,4 @@ AddExperience.propTypes = {
   addExperience: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addExperience })(AddExperience);
+export default connect(null, { addExperience })(withRouter(AddExperience));

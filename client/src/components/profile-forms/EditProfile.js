@@ -27,7 +27,7 @@ const EditProfile = ({
 
   const [displaySocialInput, toggleSocialInput] = useState(false);
   useEffect(() => {
-    getCurrentProfile();
+    getCurrentProfile([]);
     setFormData({
       company: loading || !profile.company ? '' : profile.company,
       website: loading || !profile.website ? '' : profile.website,
@@ -46,7 +46,7 @@ const EditProfile = ({
       instagram:
         loading || !profile.social.instagram ? '' : profile.social.instagram,
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
   const {
     company,
     website,
