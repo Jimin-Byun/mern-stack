@@ -5,7 +5,6 @@ import {
   AUTH_ERROR,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
-  LOTOUT,
   LOGOUT,
 } from '../actions/types';
 
