@@ -13,7 +13,7 @@ const ProfileExperience = ({
         {!to ? ' Now' : <Moment format='YYYY/MM/DD'>{to}</Moment>}
       </p>
       <p>
-        <stron>Position: </stron>
+        <strong>Position: </strong>
         {title}
       </p>
       <p>
@@ -25,7 +25,7 @@ const ProfileExperience = ({
 };
 
 ProfileExperience.propTypes = {
-  experience: PropTypes.array.isRequired,
+  experience: PropTypes.object.isRequired,
 };
 
 export default ProfileExperience;
